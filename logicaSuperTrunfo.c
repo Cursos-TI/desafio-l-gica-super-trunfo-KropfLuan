@@ -1,43 +1,146 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
-
+    printf("Seja bem vindo ao Super Trunfo!\n");
+    printf("Este é um jogo de cartas onde o objetivo é vencer o adversário com a melhor carta.\n");
+    printf("Cada carta possui atributos como População, PIB, Área e Número de pontos turísticos.\n");
     
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    char Estado1[50];
+    char CódigoCarta1[10];
+    char NomeCidade1[50];
+    unsigned long int populacao1;
+    float Área1;
+    float PIB1;
+    int pontosTuristicos1;
+    float densidadePopulacional1; 
+    float PIBperCapita1;
+    float SuperPoder1;
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    char Estado2[50];
+    char CódigoCarta2[10];
+    char NomeCidade2[50];
+    unsigned long int populacao2;
+    float Área2;
+    float PIB2;
+    int pontosTuristicos2;
+    float densidadePopulacional2;
+    float PIBperCapita2;
+    float SuperPoder2;
+    /*
+    Infomarções das cartas para serem adicionadas
+    Carta 1:
+    Estado: A
+    Código: A01
+    Nome da Cidade: São Paulo
+    População: 12325000
+    Área: 1521.11 km²
+    PIB: 699280000000 bilhões de reais
+    Número de Pontos Turísticos: 50
+ 
+    Carta 2:
+    Estado: B
+    Código: B02
+    Nome da Cidade: Rio de Janeiro
+    População: 6748000
+    Área: 1200.25 km²
+    PIB: 300500000000 bilhões de reais
+    Número de Pontos Turísticos: 30 
+    */
+    printf("Vamos registrar a sua primeira carta!\n");
+    // Solicita os dados da primeira carta do usuário
+    printf("Estado: ");
+    scanf(" %s", &Estado1);
+    
+    printf("Código da Carta(Ex: A01, B03): ");
+    scanf(" %s", &CódigoCarta1);
+    
+    printf("Nome da Cidade: ");
+    scanf(" %s", NomeCidade1);
+    
+    printf("População: ");
+    scanf("%u", &populacao1);
+    
+    printf("Área(em km²): ");
+    scanf("%f", &Área1);
+    
+    printf("PIB: ");
+    scanf("%f", &PIB1);
+    
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &pontosTuristicos1);
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    // Calcula a densidade populacional, PIB per capita e o Super Poder da primeira carta
+    densidadePopulacional1 = (float) (populacao1 / Área1);
+    PIBperCapita1 = (float) PIB1 / populacao1;
+    SuperPoder1 = (float) populacao1 + Área1 + PIB1 + pontosTuristicos1;
+    
+    
+    printf("Sua carta foi registrada com sucesso!\n");
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+// Solicita os dados da segunda carta do usuário
+    printf("Agora vamos registrar a segunda carta\n");
+    printf("Estado: ");
+    scanf(" %s", &Estado2);
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    printf("Código da Carta(Ex: A01, B03): ");
+    scanf(" %s", &CódigoCarta2);
 
+    printf("Nome da Cidade: ");
+    scanf(" %s", NomeCidade2);
+    
+    printf("População: ");
+    scanf("%u", &populacao2);
+    
+    printf("Área (em km²): ");
+    scanf("%f", &Área2);
+    
+    printf("PIB: ");
+    scanf("%f", &PIB2);
+    
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &pontosTuristicos2);
+
+    // Calcula a densidade populacional, PIB per capita e o Super Poder da segunda carta
+    densidadePopulacional2 = (float) populacao2 / Área2;
+    PIBperCapita2 = (float) PIB2 / populacao2;
+    SuperPoder2 = (float) populacao2 + Área2 + PIB2 + pontosTuristicos2;
+    
+    printf("\nSua carta foi registrada com sucesso!\n");
+// Exibe os detalhes das cartas registradas
+    printf("Aqui estão os detalhes das cartas registradas:\n");
+    printf("\nCarta 1:\n");
+    printf("Estado: %s\n", Estado1);
+    printf("Código da Carta: %s\n", CódigoCarta1);
+    printf("Nome da Cidade: %s\n", NomeCidade1);
+    printf("População: %u\n", populacao1);
+    printf("Área: %.2f km²\n", Área1);
+    printf("PIB: %.2f bilhões de reais\n", PIB1);
+    printf("Número de pontos turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade populacional: %.2f habitantes por km²\n", densidadePopulacional1);
+    printf("PIB per capita: %f reais\n", PIBperCapita1);
+    printf("Super Poder: %f\n", SuperPoder1);
+
+    printf("\nCarta 2:\n");
+    printf("Estado: %s\n", Estado2);
+    printf("Código da Carta: %s\n", CódigoCarta2);
+    printf("Nome da Cidade: %s\n", NomeCidade2);
+    printf("População: %u\n", populacao2);
+    printf("Área: %.2f km²\n", Área2);
+    printf("PIB: %.2f bilhões de reais\n", PIB2);
+    printf("Número de pontos turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade populacional: %.2f habitantes por km²\n", densidadePopulacional2);
+    printf("PIB per capita: %f reais\n", PIBperCapita2);
+    printf("Super Poder: %f\n", SuperPoder2);
+
+    // Compara os Super Poderes das cartas
+    if (populacao1 > populacao2) {
+        printf("\nCarta 1 - São Paulo (SP):\n", populacao1);
+        printf("Carta 2 - Rio de Janeiro (RJ): \n", populacao2);
+        printf("Resultado: Carta 1 (São Paulo) venceu!\n");
+    }
+
+    printf("\nObrigado por jogar Super Trunfo!\n");
+    
     return 0;
 }
