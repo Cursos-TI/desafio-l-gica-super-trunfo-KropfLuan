@@ -104,17 +104,17 @@ int main() {
             if (populacao1 > populacao2) {
                 printf ("São paulo VS Rio de Janeiro\n");
                 printf("População selecionado.\n");
-                printf("%u VS %u\n", populacao1, populacao2);
+                printf("%lu VS %lu\n", populacao1, populacao2);
                 printf("Carta 1 (São Paulo) venceu com maior população!\n");
             } else if (populacao1 < populacao2) {
                 printf ("São paulo VS Rio de Janeiro\n");
                 printf("População selecionado.\n");
-                printf("%u VS %u\n", populacao1, populacao2);
+                printf("%lu VS %lu\n", populacao1, populacao2);
                 printf("Carta 2 (Rio de Janeiro) venceu com maior população!\n");
             } else {
                 printf ("São paulo VS Rio de Janeiro\n");
                 printf("População selecionado.\n");
-                printf("%u VS %u\n", populacao1, populacao2);
+                printf("%lu VS %lu\n", populacao1, populacao2);
                 printf("Empate na população!\n");
             }
                 break;
